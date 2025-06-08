@@ -1,0 +1,1489 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gestión de Formaciones de la Fundación Loyola documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Gestión de Formaciones de la Fundación Loyola documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  UserFileComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/dashboard/info-educador/user-file/user-file.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user-file</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-file.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-file.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#finalizedFormations" >finalizedFormations</a>
+                            </li>
+                            <li>
+                                <a href="#formationData" >formationData</a>
+                            </li>
+                            <li>
+                                <a href="#idRol" >idRol</a>
+                            </li>
+                            <li>
+                                <a href="#imgPath" >imgPath</a>
+                            </li>
+                            <li>
+                                <a href="#pendingFormations" >pendingFormations</a>
+                            </li>
+                            <li>
+                                <a href="#selectedUser" >selectedUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#unsubscribe$" >unsubscribe$</a>
+                            </li>
+                            <li>
+                                <a href="#userData" >userData</a>
+                            </li>
+                            <li>
+                                <a href="#userId" >userId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changeStatus" >changeStatus</a>
+                            </li>
+                            <li>
+                                <a href="#loadUser" >loadUser</a>
+                            </li>
+                            <li>
+                                <a href="#loadUserFormations" >loadUserFormations</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadUserImage" >loadUserImage</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openEditModal" >openEditModal</a>
+                            </li>
+                            <li>
+                                <a href="#toggleEstado" >toggleEstado</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(userService: <a href="../injectables/UsuarioService.html" target="_self">UsuarioService</a>, formationService: <a href="../injectables/FormacionService.html" target="_self">FormacionService</a>, sharedService: <a href="../injectables/SharedService.html" target="_self">SharedService</a>, route: ActivatedRoute, toastr: ToastrService, cookieService: CookieService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioService.html" target="_self" >UsuarioService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FormacionService.html" target="_self" >FormacionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sharedService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SharedService.html" target="_self" >SharedService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cookieService</td>
+                                                  
+                                                        <td>
+                                                                    <code>CookieService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeStatus"></a>
+                    <span class="name">
+                        <span ><b>changeStatus</b></span>
+                        <a href="#changeStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeStatus()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="97"
+                                    class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:97</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUser"></a>
+                    <span class="name">
+                        <span ><b>loadUser</b></span>
+                        <a href="#loadUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadUser()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="60"
+                                    class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUserFormations"></a>
+                    <span class="name">
+                        <span ><b>loadUserFormations</b></span>
+                        <a href="#loadUserFormations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadUserFormations()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="77"
+                                    class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUserImage"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>loadUserImage</b></span>
+                        <a href="#loadUserImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadUserImage()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="157"
+                                    class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:157</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="45"
+                                    class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openEditModal"></a>
+                    <span class="name">
+                        <span ><b>openEditModal</b></span>
+                        <a href="#openEditModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openEditModal()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="131"
+                                    class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:131</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleEstado"></a>
+                    <span class="name">
+                        <span ><b>toggleEstado</b></span>
+                        <a href="#toggleEstado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleEstado(formation: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="140"
+                                    class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:140</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>formation</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="finalizedFormations"></a>
+                    <span class="name">
+                        <span ><b>finalizedFormations</b></span>
+                        <a href="#finalizedFormations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formationData"></a>
+                    <span class="name">
+                        <span ><b>formationData</b></span>
+                        <a href="#formationData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="idRol"></a>
+                    <span class="name">
+                        <span ><b>idRol</b></span>
+                        <a href="#idRol"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imgPath"></a>
+                    <span class="name">
+                        <span ><b>imgPath</b></span>
+                        <a href="#imgPath"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;assets/avatar.png&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pendingFormations"></a>
+                    <span class="name">
+                        <span ><b>pendingFormations</b></span>
+                        <a href="#pendingFormations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedUser"></a>
+                    <span class="name">
+                        <span ><b>selectedUser</b></span>
+                        <a href="#selectedUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unsubscribe$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>unsubscribe$</b></span>
+                        <a href="#unsubscribe$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userData"></a>
+                    <span class="name">
+                        <span ><b>userData</b></span>
+                        <a href="#userData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userId"></a>
+                    <span class="name">
+                        <span ><b>userId</b></span>
+                        <a href="#userId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/dashboard/info-educador/user-file/user-file.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {CookieService} from &quot;ngx-cookie-service&quot;;
+
+declare const bootstrap: any;
+
+import {ChangeDetectorRef, Component, OnInit} from &#x27;@angular/core&#x27;;
+import { UsuarioService } from &#x27;../../../../services/usuario.service&#x27;;
+import { ActivatedRoute } from &quot;@angular/router&quot;;
+import {Subject, takeUntil} from &#x27;rxjs&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { FormacionService } from &#x27;src/app/services/formacion.service&#x27;;
+import { jwtDecode } from &quot;jwt-decode&quot;;
+import Swal from &quot;sweetalert2&quot;;
+import {SharedService} from &quot;../../../../services/shared.service&quot;;
+
+@Component({
+  selector: &#x27;app-user-file&#x27;,
+  templateUrl: &#x27;./user-file.component.html&#x27;,
+  styleUrls: [&#x27;./user-file.component.css&#x27;]
+})
+export class UserFileComponent implements OnInit {
+
+  imgPath &#x3D; &#x27;assets/avatar.png&#x27;;
+
+  selectedUser: any;
+  userId!: number;
+  userData: any | null &#x3D; null;
+  idRol: any;
+  
+// VARIABLES FORMACIONES ------------------------------------------
+  formationData: any[] &#x3D; [];
+  finalizedFormations: any[] &#x3D; [];
+  pendingFormations: any[] &#x3D; [];
+
+  private unsubscribe$ &#x3D; new Subject&lt;void&gt;();
+
+  constructor(
+    private userService: UsuarioService,
+    private formationService: FormacionService,
+    private sharedService: SharedService,
+    private route: ActivatedRoute,
+    private toastr: ToastrService,
+    private cookieService: CookieService
+  ) {}
+
+  ngOnInit() {
+
+    this.idRol &#x3D; this.sharedService.getIdRol();
+
+    this.loadUserImage();
+    this.route.params.subscribe(params &#x3D;&gt; {
+      this.userId &#x3D; params[&#x27;id&#x27;];
+      if (this.userId) {
+        this.loadUser();
+      }
+    });
+    this.loadUserFormations();
+  }
+
+// CARGAD DE DATOS --------------------------------------------
+  loadUser() {
+    this.userService.getUserById(this.userId).pipe(takeUntil(this.unsubscribe$)).subscribe({
+      next: (response: any) &#x3D;&gt; {
+        if (response) {
+          console.log(response);
+          this.userData &#x3D; response;
+        } else {
+          console.error(&#x27;No user data received&#x27;);
+        }
+      },
+      error: (error) &#x3D;&gt; {
+        console.error(&#x27;Error al obtener al usuario&#x27;, error);
+        this.userData &#x3D; null;
+      }
+    });
+  }
+
+  loadUserFormations() {
+    this.formationService.getFormationByUserId(this.userId).pipe(takeUntil(this.unsubscribe$)).subscribe({
+      next: (response: any) &#x3D;&gt; {
+        console.log(response);
+        if(response &amp;&amp; response.success) {
+          this.formationData &#x3D; response.data;
+          this.finalizedFormations &#x3D; this.formationData.filter(f &#x3D;&gt; f.estado &#x3D;&#x3D; &#x27;Finalizada&#x27;);
+          this.pendingFormations &#x3D; this.formationData.filter(f &#x3D;&gt; f.estado &#x3D;&#x3D; &#x27;En curso&#x27;);
+        } else {
+          console.error(&#x27;No formation data received or error in response&#x27;);
+          this.formationData &#x3D; [];
+        }
+      },
+      error: (error) &#x3D;&gt; {
+        console.error(&#x27;Error al obtener las formaciones del usuario&#x27;, error);
+        this.formationData &#x3D; [];
+      }
+    });
+  }
+
+  changeStatus() {
+    const newStatus &#x3D; this.userData.estado &#x3D;&#x3D;&#x3D; 1 ? &#x27;deshabilitar&#x27; : &#x27;habilitar&#x27;;
+    const newStatusPast &#x3D; this.userData.estado &#x3D;&#x3D;&#x3D; 1 ? &#x27;deshabilitado&#x27; : &#x27;habilitado&#x27;;
+
+    Swal.fire({
+      title: &#x60;¿Estás seguro?&#x60;,
+      text: &#x60;El usuario será ${newStatusPast}.&#x60;,
+      icon: &#x27;warning&#x27;,
+      showCancelButton: true,
+      confirmButtonText: &#x60;Sí, ${newStatus}&#x60;,
+      cancelButtonText: &#x27;Cancelar&#x27;,
+      reverseButtons: true
+    }).then((result) &#x3D;&gt; {
+      if (result.isConfirmed) {
+        this.userService.changeStatus(this.userId)
+            .pipe(takeUntil(this.unsubscribe$))
+            .subscribe({
+              next: (response: any) &#x3D;&gt; {
+                if (response.success) {
+                  this.toastr.success(&#x60;Usuario ${newStatusPast} correctamente&#x60;);
+                  this.loadUser(); // Recargar los datos del usuario
+                } else {
+                  this.toastr.error(response.error || &#x27;Error al cambiar el estado del usuario&#x27;);
+                }
+              },
+              error: (error) &#x3D;&gt; {
+                console.error(&#x27;Error al cambiar el estado del usuario:&#x27;, error);
+                this.toastr.error(&#x27;Error al cambiar el estado del usuario&#x27;);
+              }
+            });
+      }
+    });
+  }
+
+  openEditModal() {
+    this.selectedUser &#x3D; this.userData;
+    // Espera a que Angular pase los datos, luego abre el modal con JS (Bootstrap)
+    setTimeout(() &#x3D;&gt; {
+      const modal &#x3D; new bootstrap.Modal(document.getElementById(&#x27;editUserModal&#x27;)!);
+      modal.show();
+    }, 100);
+  }
+
+  toggleEstado(formation: any) {
+    const id_formacion &#x3D; formation.id;
+    this.formationService.cambiarEstado(id_formacion, this.userId).subscribe({
+      next: (response: any) &#x3D;&gt; {
+        console.log(response);
+        if (response.success) {
+          console.log(response.message);
+
+          this.loadUserFormations();
+        }
+      },
+      error: (error) &#x3D;&gt; {
+        console.error(&quot;Error al actualizar la formacion asignada al usuario&quot;, error);
+      }
+    });
+  }
+
+  private loadUserImage() {
+    const token &#x3D; this.cookieService.get(&#x27;token&#x27;);
+    const decodedInfo: any &#x3D; jwtDecode(token);
+    const rawUrl &#x3D; decodedInfo.picture;
+    this.imgPath &#x3D; &#x60;http://15.proyectos.esvirgua.com/backend/src/helpers/proxy_image.php?url&#x3D;${encodeURIComponent(rawUrl)}&#x60;;
+  }
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid p-4&quot;&gt;
+
+&lt;!-- Sección del usuario --&gt;
+    &lt;div class&#x3D;&quot;d-flex mb-4&quot;&gt;
+
+    &lt;!-- Card con la imagen --&gt;
+        &lt;div class&#x3D;&quot;card mx-4&quot;&gt;
+            &lt;div class&#x3D;&quot;card-body d-flex flex-column align-items-center justify-content-center&quot;&gt;
+                &lt;img *ngIf&#x3D;&quot;imgPath&quot; [src]&#x3D;&quot;imgPath&quot; class&#x3D;&quot;img-fluid rounded-circle mb-3&quot;
+                     style&#x3D;&quot;max-width: 185px; height: auto;&quot; alt&#x3D;&quot;Foto de usuario&quot; /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;!-- Card con los datos --&gt;
+        &lt;div class&#x3D;&quot;card w-100 mx-4&quot;&gt;
+            &lt;div class&#x3D;&quot;card-title p-2 rounded-top-1 border-bottom text-white&quot;&gt;
+                &lt;h5 class&#x3D;&quot;mb-0&quot;&gt;ID ({{userData?.id}}) - {{userData?.estado &#x3D;&#x3D;&#x3D; 1 ? &#x27;Activo&#x27; : &#x27;Inactivo&#x27;}}&lt;/h5&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                &lt;div class&#x3D;&quot;row w-100&quot;&gt;
+
+                &lt;!-- Primera fila --&gt;
+                    &lt;div class&#x3D;&quot;col-12 mb-4&quot;&gt;
+                        &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+                            &lt;div class&#x3D;&quot;d-flex col-4&quot;&gt;
+                                &lt;div class&#x3D;&quot;w-25 text-end fw-bold pe-3&quot;&gt;Nombre:&lt;/div&gt;
+                                &lt;div&gt;{{ userData?.nombre_user }}&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;d-flex align-items-center col-4&quot;&gt;
+                                &lt;div class&#x3D;&quot;w-25 text-end fw-bold pe-3&quot;&gt;Apellidos:&lt;/div&gt;
+                                &lt;div&gt;{{ userData?.apellido_user }}&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;d-flex align-items-center col-4&quot;&gt;
+                                &lt;div class&#x3D;&quot;w-25 text-end fw-bold pe-3&quot;&gt;Rol:&lt;/div&gt;
+                                &lt;div&gt;{{ userData?.nombre_rol }}&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;!-- Segunda fila --&gt;
+                    &lt;div class&#x3D;&quot;col-12 mb-4&quot;&gt;
+                        &lt;div class&#x3D;&quot;d-flex justify-content-between&quot;&gt;
+                            &lt;div class&#x3D;&quot;d-flex align-items-center col-4&quot;&gt;
+                                &lt;div class&#x3D;&quot;w-25 text-end fw-bold pe-3&quot;&gt;Teléfono:&lt;/div&gt;
+                                &lt;div&gt;{{ userData?.telefono_user }}&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;d-flex align-items-center col-4&quot;&gt;
+                                &lt;div class&#x3D;&quot;w-25 text-end fw-bold pe-3&quot;&gt;Centro:&lt;/div&gt;
+                                &lt;div&gt;{{ userData?.nombre_centro }}&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;d-flex align-items-center col-4&quot;&gt;
+                                &lt;div class&#x3D;&quot;w-25 text-end fw-bold pe-3&quot;&gt;Localidad:&lt;/div&gt;
+                                &lt;div&gt;{{ userData?.nombre_localidad }}&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;!-- Tercera fila - Correo con más espacio --&gt;
+                    &lt;div class&#x3D;&quot;col-12 mb-4&quot;&gt;
+                        &lt;div class&#x3D;&quot;d-flex&quot;&gt;
+                            &lt;div class&#x3D;&quot;d-flex align-items-center w-100&quot;&gt;
+                                &lt;div class&#x3D;&quot;text-end fw-bold ps-4 pe-3&quot;&gt;Correo Electrónico:&lt;/div&gt;
+                                &lt;div&gt;{{ userData?.correo_user }}&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;idRol !&#x3D;&#x3D; 1&quot; class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-12 text-end&quot;&gt;
+                        &lt;button class&#x3D;&quot;btn btn-outline-primary me-2&quot; (click)&#x3D;&quot;openEditModal()&quot;&gt;&lt;i class&#x3D;&quot;fas fa-edit me-1&quot;&gt;&lt;/i&gt;Editar&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-outline-danger &quot;
+                                [class.btn-outline-danger]&#x3D;&quot;userData?.estado &#x3D;&#x3D;&#x3D; 1&quot;
+                                [class.btn-outline-success]&#x3D;&quot;userData?.estado &#x3D;&#x3D;&#x3D; 0&quot;
+                                (click)&#x3D;&quot;changeStatus()&quot;&gt;
+                            &lt;i class&#x3D;&quot;fas me-1&quot; [class.fa-user-slash]&#x3D;&quot;userData?.estado &#x3D;&#x3D;&#x3D; 1&quot;
+                               [class.fa-user]&#x3D;&quot;userData?.estado &#x3D;&#x3D;&#x3D; 0&quot;&gt;&lt;/i&gt;
+                            {{ userData?.estado &#x3D;&#x3D;&#x3D; 1 ? &#x27;Deshabilitar&#x27; : &#x27;Habilitar&#x27; }}
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Sección de Tabs --&gt;
+    &lt;div class&#x3D;&quot;card mx-4 mt-5 shadow-sm&quot;&gt;
+        &lt;div class&#x3D;&quot;card-body p-4&quot;&gt;
+            &lt;!-- Nav Tabs --&gt;
+            &lt;ul class&#x3D;&quot;nav nav-tabs mb-3&quot; id&#x3D;&quot;formationTabs&quot; role&#x3D;&quot;tablist&quot;&gt;
+                &lt;li class&#x3D;&quot;nav-item&quot; role&#x3D;&quot;presentation&quot;&gt;
+                    &lt;button class&#x3D;&quot;nav-link active&quot; id&#x3D;&quot;generales-tab&quot; data-bs-toggle&#x3D;&quot;tab&quot; data-bs-target&#x3D;&quot;#generales&quot; type&#x3D;&quot;button&quot; role&#x3D;&quot;tab&quot;&gt;
+                        Formaciones Generales
+                    &lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item&quot; role&#x3D;&quot;presentation&quot;&gt;
+                    &lt;button class&#x3D;&quot;nav-link&quot; id&#x3D;&quot;enCurso-tab&quot; data-bs-toggle&#x3D;&quot;tab&quot; data-bs-target&#x3D;&quot;#enCurso&quot; type&#x3D;&quot;button&quot; role&#x3D;&quot;tab&quot;&gt;
+                        Formaciones en curso
+                    &lt;/button&gt;
+                &lt;/li&gt;
+                &lt;li class&#x3D;&quot;nav-item&quot; role&#x3D;&quot;presentation&quot;&gt;
+                    &lt;button class&#x3D;&quot;nav-link&quot; id&#x3D;&quot;finalizadas-tab&quot; data-bs-toggle&#x3D;&quot;tab&quot; data-bs-target&#x3D;&quot;#finalizadas&quot; type&#x3D;&quot;button&quot; role&#x3D;&quot;tab&quot;&gt;
+                        Formaciones Finalizadas
+                    &lt;/button&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;!-- Tab Content --&gt;
+            &lt;div class&#x3D;&quot;tab-content&quot; id&#x3D;&quot;formationTabsContent&quot;&gt;
+                &lt;!-- Tab 1: Formaciones Generales --&gt;
+                &lt;div class&#x3D;&quot;tab-pane fade show active&quot; id&#x3D;&quot;generales&quot; role&#x3D;&quot;tabpanel&quot;&gt;
+                    &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+                        &lt;table class&#x3D;&quot;table table-hover align-middle table-sm&quot;&gt;
+                            &lt;thead class&#x3D;&quot;table-light&quot;&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Justificación&lt;/th&gt;
+                                &lt;th&gt;Lugar&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Duración&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Metodología&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Modalidad&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Estado&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-end&quot;&gt;Acción&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                            &lt;tr *ngFor&#x3D;&quot;let formation of formationData&quot;&gt;
+                                &lt;td&gt;{{ formation.justificacion }}&lt;/td&gt;
+                                &lt;td&gt;{{ formation.lugar_imparticion }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.duracion }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.metodologia }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.modalidad }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;
+                                    &lt;span class&#x3D;&quot;badge&quot; [ngClass]&#x3D;&quot;{
+                                        &#x27;bg-warning&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;Pendiente&#x27;,
+                                        &#x27;bg-primary&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;En curso&#x27;,
+                                        &#x27;bg-success&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;Finalizada&#x27;
+                                    }&quot;&gt;{{ formation.estado }}&lt;/span&gt;
+                                &lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-end&quot;&gt;
+                                    &lt;button *ngIf&#x3D;&quot;formation.estado !&#x3D; &#x27;Finalizada&#x27;&quot; class&#x3D;&quot;btn btn-sm&quot;
+                                            [ngClass]&#x3D;&quot;formation.estado &#x3D;&#x3D; &#x27;Pendiente&#x27; ? &#x27;btn-dark-info&#x27; : &#x27;btn-success&#x27;&quot;
+                                            (click)&#x3D;&quot;toggleEstado(formation)&quot;&gt;
+                                        {{ formation.estado &#x3D;&#x3D; &#x27;Pendiente&#x27; ? &#x27;Marcar en curso&#x27; : &#x27;Marcar finalizada&#x27; }}
+                                    &lt;/button&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Tab 2: Formaciones En Curso--&gt;
+                &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;enCurso&quot; role&#x3D;&quot;tabpanel&quot;&gt;
+                    &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+                        &lt;table class&#x3D;&quot;table table-hover align-middle table-sm&quot;&gt;
+                            &lt;thead class&#x3D;&quot;table-light&quot;&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Justificación&lt;/th&gt;
+                                &lt;th&gt;Lugar&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Duración&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Metodología&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Modalidad&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Estado&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-end&quot;&gt;Acción&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                            &lt;tr *ngFor&#x3D;&quot;let formation of pendingFormations&quot;&gt;
+                                &lt;td&gt;{{ formation.justificacion }}&lt;/td&gt;
+                                &lt;td&gt;{{ formation.lugar_imparticion }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.duracion }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.metodologia }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.modalidad }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;
+                                    &lt;span class&#x3D;&quot;badge&quot; [ngClass]&#x3D;&quot;{
+                                        &#x27;bg-warning&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;Pendiente&#x27;,
+                                        &#x27;bg-primary&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;En curso&#x27;,
+                                        &#x27;bg-success&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;Finalizada&#x27;
+                                    }&quot;&gt;{{ formation.estado }}&lt;/span&gt;
+                                &lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-end&quot;&gt;
+                                    &lt;button class&#x3D;&quot;btn btn-sm btn-success&quot; (click)&#x3D;&quot;toggleEstado(formation)&quot;&gt;
+                                        Marcar finalizada
+                                    &lt;/button&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Tab 2: Formaciones Finalizadas --&gt;
+                &lt;div class&#x3D;&quot;tab-pane fade&quot; id&#x3D;&quot;finalizadas&quot; role&#x3D;&quot;tabpanel&quot;&gt;
+                    &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+                        &lt;table class&#x3D;&quot;table table-hover align-middle table-sm&quot;&gt;
+                            &lt;thead class&#x3D;&quot;table-light&quot;&gt;
+                            &lt;tr&gt;
+                                &lt;th&gt;Justificación&lt;/th&gt;
+                                &lt;th&gt;Lugar&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Duración&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Metodología&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Modalidad&lt;/th&gt;
+                                &lt;th class&#x3D;&quot;text-center&quot;&gt;Estado&lt;/th&gt;
+                            &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                            &lt;tr *ngFor&#x3D;&quot;let formation of finalizedFormations&quot;&gt;
+                                &lt;td&gt;{{ formation.justificacion }}&lt;/td&gt;
+                                &lt;td&gt;{{ formation.lugar_imparticion }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.duracion }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.metodologia }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;{{ formation.modalidad }}&lt;/td&gt;
+                                &lt;td class&#x3D;&quot;text-center&quot;&gt;
+                                    &lt;span class&#x3D;&quot;badge&quot; [ngClass]&#x3D;&quot;{
+                                        &#x27;bg-warning&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;Pendiente&#x27;,
+                                        &#x27;bg-primary&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;En curso&#x27;,
+                                        &#x27;bg-success&#x27;: formation.estado &#x3D;&#x3D;&#x3D; &#x27;Finalizada&#x27;
+                                    }&quot;&gt;{{ formation.estado }}&lt;/span&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;app-edit-user *ngIf&#x3D;&quot;selectedUser&quot; [userData]&#x3D;&quot;selectedUser&quot;&gt;&lt;/app-edit-user&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./user-file.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.card-title {
+  background-color: var(--color-secundario);
+}
+
+.btn-dark-info {
+  background-color: var(--color-terciario);
+  color: #ffffff;
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid p-4"><!-- Sección del usuario -->    <div class="d-flex mb-4">    <!-- Card con la imagen -->        <div class="card mx-4">            <div class="card-body d-flex flex-column align-items-center justify-content-center">                <img *ngIf="imgPath" [src]="imgPath" class="img-fluid rounded-circle mb-3"                     style="max-width: 185px; height: auto;" alt="Foto de usuario" />            </div>        </div>    <!-- Card con los datos -->        <div class="card w-100 mx-4">            <div class="card-title p-2 rounded-top-1 border-bottom text-white">                <h5 class="mb-0">ID ({{userData?.id}}) - {{userData?.estado === 1 ? \'Activo\' : \'Inactivo\'}}</h5>            </div>            <div class="card-body">                <div class="row w-100">                <!-- Primera fila -->                    <div class="col-12 mb-4">                        <div class="d-flex justify-content-between">                            <div class="d-flex col-4">                                <div class="w-25 text-end fw-bold pe-3">Nombre:</div>                                <div>{{ userData?.nombre_user }}</div>                            </div>                            <div class="d-flex align-items-center col-4">                                <div class="w-25 text-end fw-bold pe-3">Apellidos:</div>                                <div>{{ userData?.apellido_user }}</div>                            </div>                            <div class="d-flex align-items-center col-4">                                <div class="w-25 text-end fw-bold pe-3">Rol:</div>                                <div>{{ userData?.nombre_rol }}</div>                            </div>                        </div>                    </div>                <!-- Segunda fila -->                    <div class="col-12 mb-4">                        <div class="d-flex justify-content-between">                            <div class="d-flex align-items-center col-4">                                <div class="w-25 text-end fw-bold pe-3">Teléfono:</div>                                <div>{{ userData?.telefono_user }}</div>                            </div>                            <div class="d-flex align-items-center col-4">                                <div class="w-25 text-end fw-bold pe-3">Centro:</div>                                <div>{{ userData?.nombre_centro }}</div>                            </div>                            <div class="d-flex align-items-center col-4">                                <div class="w-25 text-end fw-bold pe-3">Localidad:</div>                                <div>{{ userData?.nombre_localidad }}</div>                            </div>                        </div>                    </div>                <!-- Tercera fila - Correo con más espacio -->                    <div class="col-12 mb-4">                        <div class="d-flex">                            <div class="d-flex align-items-center w-100">                                <div class="text-end fw-bold ps-4 pe-3">Correo Electrónico:</div>                                <div>{{ userData?.correo_user }}</div>                            </div>                        </div>                    </div>                </div>                <div *ngIf="idRol !== 1" class="row">                    <div class="col-12 text-end">                        <button class="btn btn-outline-primary me-2" (click)="openEditModal()"><i class="fas fa-edit me-1"></i>Editar</button>                        <button class="btn btn-outline-danger "                                [class.btn-outline-danger]="userData?.estado === 1"                                [class.btn-outline-success]="userData?.estado === 0"                                (click)="changeStatus()">                            <i class="fas me-1" [class.fa-user-slash]="userData?.estado === 1"                               [class.fa-user]="userData?.estado === 0"></i>                            {{ userData?.estado === 1 ? \'Deshabilitar\' : \'Habilitar\' }}                        </button>                    </div>                </div>            </div>        </div>    </div>    <!-- Sección de Tabs -->    <div class="card mx-4 mt-5 shadow-sm">        <div class="card-body p-4">            <!-- Nav Tabs -->            <ul class="nav nav-tabs mb-3" id="formationTabs" role="tablist">                <li class="nav-item" role="presentation">                    <button class="nav-link active" id="generales-tab" data-bs-toggle="tab" data-bs-target="#generales" type="button" role="tab">                        Formaciones Generales                    </button>                </li>                <li class="nav-item" role="presentation">                    <button class="nav-link" id="enCurso-tab" data-bs-toggle="tab" data-bs-target="#enCurso" type="button" role="tab">                        Formaciones en curso                    </button>                </li>                <li class="nav-item" role="presentation">                    <button class="nav-link" id="finalizadas-tab" data-bs-toggle="tab" data-bs-target="#finalizadas" type="button" role="tab">                        Formaciones Finalizadas                    </button>                </li>            </ul>            <!-- Tab Content -->            <div class="tab-content" id="formationTabsContent">                <!-- Tab 1: Formaciones Generales -->                <div class="tab-pane fade show active" id="generales" role="tabpanel">                    <div class="table-responsive">                        <table class="table table-hover align-middle table-sm">                            <thead class="table-light">                            <tr>                                <th>Justificación</th>                                <th>Lugar</th>                                <th class="text-center">Duración</th>                                <th class="text-center">Metodología</th>                                <th class="text-center">Modalidad</th>                                <th class="text-center">Estado</th>                                <th class="text-end">Acción</th>                            </tr>                            </thead>                            <tbody>                            <tr *ngFor="let formation of formationData">                                <td>{{ formation.justificacion }}</td>                                <td>{{ formation.lugar_imparticion }}</td>                                <td class="text-center">{{ formation.duracion }}</td>                                <td class="text-center">{{ formation.metodologia }}</td>                                <td class="text-center">{{ formation.modalidad }}</td>                                <td class="text-center">                                    <span class="badge" [ngClass]="{                                        \'bg-warning\': formation.estado === \'Pendiente\',                                        \'bg-primary\': formation.estado === \'En curso\',                                        \'bg-success\': formation.estado === \'Finalizada\'                                    }">{{ formation.estado }}</span>                                </td>                                <td class="text-end">                                    <button *ngIf="formation.estado != \'Finalizada\'" class="btn btn-sm"                                            [ngClass]="formation.estado == \'Pendiente\' ? \'btn-dark-info\' : \'btn-success\'"                                            (click)="toggleEstado(formation)">                                        {{ formation.estado == \'Pendiente\' ? \'Marcar en curso\' : \'Marcar finalizada\' }}                                    </button>                                </td>                            </tr>                            </tbody>                        </table>                    </div>                </div>                <!-- Tab 2: Formaciones En Curso-->                <div class="tab-pane fade" id="enCurso" role="tabpanel">                    <div class="table-responsive">                        <table class="table table-hover align-middle table-sm">                            <thead class="table-light">                            <tr>                                <th>Justificación</th>                                <th>Lugar</th>                                <th class="text-center">Duración</th>                                <th class="text-center">Metodología</th>                                <th class="text-center">Modalidad</th>                                <th class="text-center">Estado</th>                                <th class="text-end">Acción</th>                            </tr>                            </thead>                            <tbody>                            <tr *ngFor="let formation of pendingFormations">                                <td>{{ formation.justificacion }}</td>                                <td>{{ formation.lugar_imparticion }}</td>                                <td class="text-center">{{ formation.duracion }}</td>                                <td class="text-center">{{ formation.metodologia }}</td>                                <td class="text-center">{{ formation.modalidad }}</td>                                <td class="text-center">                                    <span class="badge" [ngClass]="{                                        \'bg-warning\': formation.estado === \'Pendiente\',                                        \'bg-primary\': formation.estado === \'En curso\',                                        \'bg-success\': formation.estado === \'Finalizada\'                                    }">{{ formation.estado }}</span>                                </td>                                <td class="text-end">                                    <button class="btn btn-sm btn-success" (click)="toggleEstado(formation)">                                        Marcar finalizada                                    </button>                                </td>                            </tr>                            </tbody>                        </table>                    </div>                </div>                <!-- Tab 2: Formaciones Finalizadas -->                <div class="tab-pane fade" id="finalizadas" role="tabpanel">                    <div class="table-responsive">                        <table class="table table-hover align-middle table-sm">                            <thead class="table-light">                            <tr>                                <th>Justificación</th>                                <th>Lugar</th>                                <th class="text-center">Duración</th>                                <th class="text-center">Metodología</th>                                <th class="text-center">Modalidad</th>                                <th class="text-center">Estado</th>                            </tr>                            </thead>                            <tbody>                            <tr *ngFor="let formation of finalizedFormations">                                <td>{{ formation.justificacion }}</td>                                <td>{{ formation.lugar_imparticion }}</td>                                <td class="text-center">{{ formation.duracion }}</td>                                <td class="text-center">{{ formation.metodologia }}</td>                                <td class="text-center">{{ formation.modalidad }}</td>                                <td class="text-center">                                    <span class="badge" [ngClass]="{                                        \'bg-warning\': formation.estado === \'Pendiente\',                                        \'bg-primary\': formation.estado === \'En curso\',                                        \'bg-success\': formation.estado === \'Finalizada\'                                    }">{{ formation.estado }}</span>                                </td>                            </tr>                            </tbody>                        </table>                    </div>                </div>            </div>        </div>    </div></div><app-edit-user *ngIf="selectedUser" [userData]="selectedUser"></app-edit-user></div>'
+    var COMPONENTS = [{'name': 'AltaCentroComponent', 'selector': 'app-alta-centro'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AsignarUsuariosFormacionModalComponent', 'selector': 'app-asignar-usuarios'},{'name': 'CrearFormacionModalComponent', 'selector': 'app-crear-formacion-modal'},{'name': 'EditarFormacionModalComponent', 'selector': 'app-editar-formacion-modal'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormacionFormComponent', 'selector': 'app-formacion-form'},{'name': 'GoogleSignInComponent', 'selector': 'app-google-sign-in'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InfoCentroComponent', 'selector': 'app-info-centro'},{'name': 'InfoCursoComponent', 'selector': 'app-info-curso'},{'name': 'InfoEducadorComponent', 'selector': 'app-info-educador'},{'name': 'InfoFormacionComponent', 'selector': 'app-info-sdsda'},{'name': 'InscripcionFormacionComponent', 'selector': 'app-asignar-usuario-formacion'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'ModificarCentroComponent', 'selector': 'app-modificar-centro'},{'name': 'NoAutorizadoComponent', 'selector': 'app-no-autorizado'},{'name': 'TemplateComponent', 'selector': 'app-template'},{'name': 'UserFileComponent', 'selector': 'app-user-file'},{'name': 'UserModalComponent', 'selector': 'app-new-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UserFileComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserFileComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1439 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gestión de Formaciones de la Fundación Loyola documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Gestión de Formaciones de la Fundación Loyola documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  InfoCentroComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/dashboard/info-centro/info-centro.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-info-centro</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./info-centro.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./info-centro.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#centroAEliminar" >centroAEliminar</a>
+                            </li>
+                            <li>
+                                <a href="#centroSeleccionado" >centroSeleccionado</a>
+                            </li>
+                            <li>
+                                <a href="#dataSource" >dataSource</a>
+                            </li>
+                            <li>
+                                <a href="#dataTableInstance" >dataTableInstance</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumns" >displayedColumns</a>
+                            </li>
+                            <li>
+                                <a href="#mensaje" >mensaje</a>
+                            </li>
+                            <li>
+                                <a href="#nuevoCentro" >nuevoCentro</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#unsubscribe$" >unsubscribe$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#borrarRegistro" >borrarRegistro</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getCentros" >getCentros</a>
+                            </li>
+                            <li>
+                                <a href="#loadDataTable" >loadDataTable</a>
+                            </li>
+                            <li>
+                                <a href="#modificarRegistro" >modificarRegistro</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#refreshLista" >refreshLista</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(centrosService: <a href="../injectables/CentrosService.html" target="_self">CentrosService</a>, toastr: ToastrService, cdr: ChangeDetectorRef, ngZone: NgZone)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:63</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor que inyecta los servicios necesarios.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>centrosService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CentrosService.html" target="_self" >CentrosService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Servicio para acceder a datos de centros.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Servicio para mostrar notificaciones.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ChangeDetectorRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Servicio para detectar cambios manuales.</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>ngZone</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgZone</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Servicio para ejecutar código dentro de la zona de Angular</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="borrarRegistro"></a>
+                    <span class="name">
+                        <span ><b>borrarRegistro</b></span>
+                        <a href="#borrarRegistro"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>borrarRegistro(element: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="104"
+                                    class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:104</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Solicita confirmación y elimina un centro si el usuario acepta.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>element</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <p>registro a eliminar.</p>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCentros"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>getCentros</b></span>
+                        <a href="#getCentros"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCentros()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="147"
+                                    class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:147</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Carga todos los centros desde el servicio.
+Muestra mensaje si no hay resultados.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadDataTable"></a>
+                    <span class="name">
+                        <span ><b>loadDataTable</b></span>
+                        <a href="#loadDataTable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadDataTable()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="161"
+                                    class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:161</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modificarRegistro"></a>
+                    <span class="name">
+                        <span ><b>modificarRegistro</b></span>
+                        <a href="#modificarRegistro"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>modificarRegistro(element: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Abre el modal para modificar un centro existente.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>element</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <p>registro seleccionado de la tabla.</p>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="77"
+                                    class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Hook de inicialización. Carga la lista de centros al inicio.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshLista"></a>
+                    <span class="name">
+                        <span ><b>refreshLista</b></span>
+                        <a href="#refreshLista"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshLista(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="138"
+                                    class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:138</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Refresca la lista de centros. Se puede usar desde eventos externos.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <p>Evento recibido desde el componente hijo.</p>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="centroAEliminar"></a>
+                    <span class="name">
+                        <span ><b>centroAEliminar</b></span>
+                        <a href="#centroAEliminar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Centro marcado para ser eliminado.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="centroSeleccionado"></a>
+                    <span class="name">
+                        <span ><b>centroSeleccionado</b></span>
+                        <a href="#centroSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Centro seleccionado para modificar.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataSource"></a>
+                    <span class="name">
+                        <span ><b>dataSource</b></span>
+                        <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fuente de datos para la tabla.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataTableInstance"></a>
+                    <span class="name">
+                        <span ><b>dataTableInstance</b></span>
+                        <a href="#dataTableInstance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedColumns"></a>
+                    <span class="name">
+                        <span ><b>displayedColumns</b></span>
+                        <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    &#x27;nombre_centro&#x27;,
+    &#x27;direccion_centro&#x27;,
+    &#x27;cp&#x27;,
+    &#x27;correo_centro&#x27;,
+    &#x27;telefono_centro&#x27;,
+    &#x27;nombre_localidad&#x27;
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Columnas visibles en la tabla de centros.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mensaje"></a>
+                    <span class="name">
+                        <span ><b>mensaje</b></span>
+                        <a href="#mensaje"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Mensaje informativo que se muestra si no hay resultados.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nuevoCentro"></a>
+                    <span class="name">
+                        <span ><b>nuevoCentro</b></span>
+                        <a href="#nuevoCentro"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    nombre_centro: &#x27;&#x27;,
+    direccion_centro: &#x27;&#x27;,
+    cp: &#x27;&#x27;,
+    nombre_localidad: &#x27;&#x27;,
+    telefono_centro: &#x27;&#x27;,
+    correo_centro: &#x27;&#x27;
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Objeto para registrar un nuevo centro.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unsubscribe$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>unsubscribe$</b></span>
+                        <a href="#unsubscribe$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/dashboard/info-centro/info-centro.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {ChangeDetectorRef, Component, OnInit, NgZone} from &#x27;@angular/core&#x27;;
+import { CentrosService } from &#x27;src/app/services/centros.service&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import Swal2 from &#x27;sweetalert2&#x27;;
+import * as $ from &#x27;jquery&#x27;;
+import &#x27;datatables.net&#x27;;
+import &#x27;datatables.net-bs5&#x27;;
+import {Subject, takeUntil} from &quot;rxjs&quot;;
+
+
+@Component({
+  selector: &#x27;app-info-centro&#x27;,
+  templateUrl: &#x27;./info-centro.component.html&#x27;,
+  styleUrls: [&#x27;./info-centro.component.css&#x27;]
+})
+export class InfoCentroComponent implements OnInit {
+
+   /**
+   * Columnas visibles en la tabla de centros.
+   */
+
+  displayedColumns: string[] &#x3D; [
+    &#x27;nombre_centro&#x27;,
+    &#x27;direccion_centro&#x27;,
+    &#x27;cp&#x27;,
+    &#x27;correo_centro&#x27;,
+    &#x27;telefono_centro&#x27;,
+    &#x27;nombre_localidad&#x27;
+  ];
+
+  /**
+   * Fuente de datos para la tabla.
+   */
+  dataSource: any[] &#x3D; [];
+  dataTableInstance: any;
+  private unsubscribe$ &#x3D; new Subject&lt;void&gt;();
+
+  /**
+   * Objeto para registrar un nuevo centro.
+   */
+  nuevoCentro: any &#x3D; {
+    nombre_centro: &#x27;&#x27;,
+    direccion_centro: &#x27;&#x27;,
+    cp: &#x27;&#x27;,
+    nombre_localidad: &#x27;&#x27;,
+    telefono_centro: &#x27;&#x27;,
+    correo_centro: &#x27;&#x27;
+  };
+
+  /**
+   * Mensaje informativo que se muestra si no hay resultados.
+   */
+  mensaje: string &#x3D; &#x27;&#x27;;
+
+   /**
+   * Centro seleccionado para modificar.
+   */
+  centroSeleccionado: any &#x3D; {};
+
+   /**
+   * Centro marcado para ser eliminado.
+   */
+  centroAEliminar: any &#x3D; null;
+
+  /**
+   * Constructor que inyecta los servicios necesarios.
+   * @param centrosService Servicio para acceder a datos de centros.
+   * @param toastr Servicio para mostrar notificaciones.
+   * @param cdr Servicio para detectar cambios manuales.
+   * @param ngZone Servicio para ejecutar código dentro de la zona de Angular
+   */
+  constructor(private centrosService: CentrosService, private toastr: ToastrService, private cdr: ChangeDetectorRef, private ngZone: NgZone) {}
+
+  /**
+   * Hook de inicialización. Carga la lista de centros al inicio.
+   */
+  ngOnInit(): void {
+    this.getCentros();
+
+    this.centrosService.centrosActualizados$.pipe(takeUntil(this.unsubscribe$)).subscribe(() &#x3D;&gt; {
+        setTimeout(() &#x3D;&gt; {
+          this.getCentros();
+        }, 200);
+    });
+  }
+
+  /**
+   * Abre el modal para modificar un centro existente.
+   * @param element registro seleccionado de la tabla.
+   */
+  modificarRegistro(element: any): void {
+    this.centroSeleccionado &#x3D; { ...element }; 
+    const modal &#x3D; document.getElementById(&#x27;modificarCentroModal&#x27;);
+    if (modal) {
+      const bootstrapModal &#x3D; new (window as any).bootstrap.Modal(modal);
+      bootstrapModal.show(); 
+    }
+  }
+  
+  /**
+   * Solicita confirmación y elimina un centro si el usuario acepta.
+   * @param element registro a eliminar.
+   */
+  borrarRegistro(element: any): void {
+    this.centroAEliminar &#x3D; element; 
+    Swal2.fire({
+      title: &#x27;¿Estás seguro?&#x27;,
+      text: &#x27;No podrás revertir esta acción.&#x27;,
+      icon: &#x27;warning&#x27;,
+      showCancelButton: true,
+      confirmButtonColor: &#x27;#3085d6&#x27;,
+      cancelButtonColor: &#x27;#d33&#x27;,
+      confirmButtonText: &#x27;Sí, eliminar&#x27;,
+      cancelButtonText: &#x27;Cancelar&#x27;
+    }).then((result: any) &#x3D;&gt; {
+      if (result.isConfirmed) {
+        this.centrosService.eliminarCentro(this.centroAEliminar.correo_centro).subscribe(response &#x3D;&gt; {
+          if (response.success) {
+            this.dataSource &#x3D; this.dataSource.filter(item &#x3D;&gt; item.correo_centro !&#x3D;&#x3D; this.centroAEliminar.correo_centro);
+            this.toastr.success(&#x27;Centro eliminado correctamente.&#x27;, &#x27;Éxito&#x27;);
+            this.loadDataTable();
+          } else {
+            this.toastr.error(&#x27;Error al eliminar el centro: &#x27; + response.message, &#x27;Error&#x27;);
+          }
+          this.centroAEliminar &#x3D; null;
+        }, error &#x3D;&gt; {
+          this.toastr.error(&#x27;Error al comunicarse con el servidor.&#x27;, &#x27;Error&#x27;);
+          this.centroAEliminar &#x3D; null; 
+        });
+      }
+    });
+  }
+
+  /**
+   * Refresca la lista de centros. Se puede usar desde eventos externos.
+   * @param event Evento recibido desde el componente hijo.
+   */
+  refreshLista(event: any): void {
+    this.getCentros();
+    this.cdr.detectChanges();
+  }
+
+  /**
+   * Carga todos los centros desde el servicio.
+   * Muestra mensaje si no hay resultados.
+   */
+  private getCentros(): void {
+    this.centrosService.getCentros().pipe(takeUntil(this.unsubscribe$)).subscribe(response &#x3D;&gt; {
+      if (response.success) {
+        this.dataSource &#x3D; response.data;
+        this.cdr.detectChanges();
+        this.loadDataTable();
+      } else {
+        this.mensaje &#x3D; &#x27;No existen centros registrados. Dar de alta uno nuevo.&#x27;;
+      }
+    });
+  }
+
+// METODOS DE LA TABLA -----------------------------------
+
+  loadDataTable() {
+    setTimeout(() &#x3D;&gt; {
+      const table &#x3D; $(&#x27;#centerTable&#x27;);
+
+      // @ts-ignore
+      if ($.fn.DataTable.isDataTable(table)) {
+        this.dataTableInstance.destroy();  // destruye la instancia
+        table.empty();              // limpia el contenido
+      }
+
+
+      this.dataTableInstance &#x3D; table.DataTable({
+        data: this.dataSource,
+        processing: true,
+        autoWidth: false,
+        pageLength: 6,
+        searching: false,
+        ordering: false,
+        lengthChange: false,
+        pagingType: &#x27;simple_numbers&#x27;,
+        language: {
+          lengthMenu: &quot;Mostrar _MENU_ entradas&quot;,
+          info: &quot;Mostrando _START_ a _END_ de _TOTAL_ entradas&quot;,
+          infoEmpty: &#x27;Mostrando 0 a 0 de 0 entradas&#x27;,
+          paginate: {
+            first: &quot;&quot;,
+            previous: &quot; &lt;i class&#x3D;&#x27;fas fa-chevron-left&#x27;&gt;&lt;/i&gt; Anterior&quot;,
+            next: &quot;Siguiente &lt;i class&#x3D;&#x27;fas fa-chevron-right&#x27;&gt;&lt;/i&gt;&quot;,
+            last: &quot;&quot;
+          }
+        },
+        columns: [{
+          data: &#x27;nombre_centro&#x27;,
+          className: &#x27;ps-4&#x27;,
+        //
+        // &lt;i class&#x3D;&quot;fas fa-map-marker-alt text-theme me-2&quot;&gt;&lt;/i&gt;
+          render: (data: any, type: any, row: any) &#x3D;&gt; {
+            return &#x60; &lt;a class&#x3D;&quot;text-decoration-none text-detalles fw-medium&quot; href&#x3D;&quot;${row.url}&quot; target&#x3D;&quot;_blank&quot;&gt;
+                        &lt;i class&#x3D;&quot;fas fa-building text-theme me-2&quot;&gt;&lt;/i&gt;
+                        ${row.nombre_centro}
+                      &lt;/a&gt;
+                      
+            &#x60;
+          }
+        },{
+          data: &#x27;direccion_centro&#x27;,
+          className: &#x27;text-start&#x27;,
+          render: (data: any, type: any, row: any) &#x3D;&gt; {
+            return &#x60;&lt;i class&#x3D;&quot;fas fa-map-marker-alt text-theme me-2&quot;&gt;&lt;/i&gt;${row.direccion_centro}&#x60;
+          }
+        },{
+          data: &#x27;correo_centro&#x27;,
+          render: (data: any, type: any, row: any) &#x3D;&gt; {
+            return &#x60;&lt;i class&#x3D;&quot;fas fa-envelope text-theme me-2&quot;&gt;&lt;/i&gt;${row.correo_centro}&#x60;
+          }
+        },{
+          data: &#x27;telefono_centro&#x27;,
+          render: (data: any, type: any, row: any) &#x3D;&gt; {
+            return &#x60;&lt;i class&#x3D;&quot;fas fa-phone text-theme me-2&quot;&gt;&lt;/i&gt;${row.telefono_centro}&#x60;
+          }
+        },{
+          data: &#x27;cp&#x27;,
+          className: &#x27;text-end&#x27;,
+        },{
+          data: &#x27;nombre_localidad&#x27;,
+        },{
+          data: &#x27;null&#x27;,
+          className: &#x27;text-center&#x27;,
+          render: (data: any, type: any, row: any) &#x3D;&gt; &#x60;
+            &lt;div class&#x3D;&quot;d-flex justify-content-center gap-2&quot;&gt;
+              &lt;button class&#x3D;&quot;btn btn-sm btn-outline-primary btn-sm btn-modificar&quot;&gt;&lt;i class&#x3D;&quot;fa-solid fa-pencil&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+              &lt;button class&#x3D;&quot;btn btn-sm btn-outline-danger btn-sm btn-borrar&quot;&gt;&lt;i class&#x3D;&quot;fa-solid fa-trash-can&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;/div&gt;
+          &#x60;
+        }]
+      });
+
+      $(&#x27;#centerTable tbody&#x27;).on(&#x27;click&#x27;, &#x27;button&#x27;, (event) &#x3D;&gt; {
+        const $btn &#x3D; $(event.currentTarget);
+        const rowData &#x3D; this.dataTableInstance.row($btn.closest(&#x27;tr&#x27;)).data();
+
+        this.ngZone.run(() &#x3D;&gt; {
+          if ($btn.hasClass(&#x27;btn-modificar&#x27;)) {
+            this.modificarRegistro(rowData);
+          } else if ($btn.hasClass(&#x27;btn-borrar&#x27;)) {
+            this.borrarRegistro(rowData);
+          }
+        });
+      });
+    }, 100);
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+    &lt;div class&#x3D;&quot;my-3 mx-4&quot;&gt;
+        &lt;div class&#x3D;&quot;d-flex justify-content-end&quot;&gt;
+            &lt;!-- Botón para abrir el modal --&gt;
+            &lt;button class&#x3D;&quot;btn btn-primary mb-3&quot; data-bs-toggle&#x3D;&quot;modal&quot; data-bs-target&#x3D;&quot;#altaCentroModal&quot;&gt;
+                Alta centro
+            &lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;table id&#x3D;&quot;centerTable&quot; class&#x3D;&quot;table table-striped table-hover&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Nombre Centro&lt;/th&gt;
+                        &lt;th&gt;Dirección&lt;/th&gt;
+                        &lt;th&gt;Correo&lt;/th&gt;
+                        &lt;th&gt;Teléfono&lt;/th&gt;
+                        &lt;th&gt;Código Postal&lt;/th&gt;
+                        &lt;th&gt;Localidad&lt;/th&gt;
+                        &lt;th&gt;Acciones&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr *ngIf&#x3D;&quot;mensaje&quot;&gt;
+                        &lt;td colspan&#x3D;&quot;7&quot; class&#x3D;&quot;text-center&quot;&gt;{{ mensaje }}&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;app-alta-centro (refreshLista)&#x3D;&quot;refreshLista($event)&quot;&gt;&lt;/app-alta-centro&gt;
+&lt;app-modificar-centro
+  [centroSeleccionado]&#x3D;&quot;centroSeleccionado&quot;&gt;
+&lt;/app-modificar-centro&gt;
+  
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./info-centro.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.text-detalles {
+    color: var(--color-detalles);
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">    <div class="my-3 mx-4">        <div class="d-flex justify-content-end">            <!-- Botón para abrir el modal -->            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#altaCentroModal">                Alta centro            </button>        </div>        <div>            <table id="centerTable" class="table table-striped table-hover">                <thead>                    <tr>                        <th>Nombre Centro</th>                        <th>Dirección</th>                        <th>Correo</th>                        <th>Teléfono</th>                        <th>Código Postal</th>                        <th>Localidad</th>                        <th>Acciones</th>                    </tr>                </thead>                <tbody>                    <tr *ngIf="mensaje">                        <td colspan="7" class="text-center">{{ mensaje }}</td>                    </tr>                </tbody>            </table>        </div>    </div></div><app-alta-centro (refreshLista)="refreshLista($event)"></app-alta-centro><app-modificar-centro  [centroSeleccionado]="centroSeleccionado"></app-modificar-centro>  </div>'
+    var COMPONENTS = [{'name': 'AltaCentroComponent', 'selector': 'app-alta-centro'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AsignarUsuariosFormacionModalComponent', 'selector': 'app-asignar-usuarios'},{'name': 'CrearFormacionModalComponent', 'selector': 'app-crear-formacion-modal'},{'name': 'EditarFormacionModalComponent', 'selector': 'app-editar-formacion-modal'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormacionFormComponent', 'selector': 'app-formacion-form'},{'name': 'GoogleSignInComponent', 'selector': 'app-google-sign-in'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InfoCentroComponent', 'selector': 'app-info-centro'},{'name': 'InfoCursoComponent', 'selector': 'app-info-curso'},{'name': 'InfoEducadorComponent', 'selector': 'app-info-educador'},{'name': 'InfoFormacionComponent', 'selector': 'app-info-sdsda'},{'name': 'InscripcionFormacionComponent', 'selector': 'app-asignar-usuario-formacion'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'ModificarCentroComponent', 'selector': 'app-modificar-centro'},{'name': 'NoAutorizadoComponent', 'selector': 'app-no-autorizado'},{'name': 'TemplateComponent', 'selector': 'app-template'},{'name': 'UserFileComponent', 'selector': 'app-user-file'},{'name': 'UserModalComponent', 'selector': 'app-new-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InfoCentroComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InfoCentroComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

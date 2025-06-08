@@ -1,0 +1,1144 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Gestión de Formaciones de la Fundación Loyola documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">Gestión de Formaciones de la Fundación Loyola documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  GoogleSignInComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/google-sign-in/google-sign-in.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-google-sign-in</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./google-sign-in.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./google-sign-in.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#currentImageIndex" >currentImageIndex</a>
+                            </li>
+                            <li>
+                                <a href="#images" >images</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#handleCredentialResponse" >handleCredentialResponse</a>
+                            </li>
+                            <li>
+                                <a href="#initializeGoogleSignIn" >initializeGoogleSignIn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadCarousel" >loadCarousel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadGoogleScript" >loadGoogleScript</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(ngZone: NgZone, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: Router, cookieService: CookieService, toastr: ToastrService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>ngZone</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgZone</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cookieService</td>
+                                                  
+                                                        <td>
+                                                                    <code>CookieService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleCredentialResponse"></a>
+                    <span class="name">
+                        <span ><b>handleCredentialResponse</b></span>
+                        <a href="#handleCredentialResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleCredentialResponse(response: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="89"
+                                    class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:89</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Maneja la respuesta recibida de Google Sign-In.</p>
+<p>Este método toma la respuesta del proceso de inicio de sesión de Google y verifica
+si hay cuentas existentes utilizando el <code>authService</code>. Si la verificación de la cuenta
+tiene éxito, muestra un mensaje de éxito, establece el estado de autenticación,
+guarda el token en cookies y navega a la ruta &#39;/info-centros&#39;. Si la verificación de la
+cuenta falla, muestra un mensaje de error con el motivo del fallo.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>response</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>El objeto de respuesta recibido de Google Sign-In que contiene la credencial.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeGoogleSignIn"></a>
+                    <span class="name">
+                        <span ><b>initializeGoogleSignIn</b></span>
+                        <a href="#initializeGoogleSignIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializeGoogleSignIn()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="64"
+                                    class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Inicializa el botón de inicio de sesión con Google (GSI).</p>
+<p>Este método inicializa el botón de GSI con el identificador de cliente y una
+función de callback. La función de callback se llama cuando el usuario hace clic
+en el botón de GSI y se autentica con Google.</p>
+<p>El método también renderiza el botón de GSI con un tema y tamaño personalizados.
+El tema se establece en &#39;outline&#39; y el tamaño se establece en &#39;large&#39;.</p>
+<p>Además, el método muestra el diálogo de inicio de sesión de un solo toque, que
+permite al usuario iniciar sesión con un solo clic.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadCarousel"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>loadCarousel</b></span>
+                        <a href="#loadCarousel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadCarousel()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="146"
+                                    class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:146</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Realiza un ciclo automático a través de las imágenes en el carrusel.</p>
+<p>Este método actualiza el índice <code>currentImageIndex</code> a intervalos regulares,
+lo que hace que la imagen mostrada en el carrusel cambie cada 5 segundos.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadGoogleScript"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>loadGoogleScript</b></span>
+                        <a href="#loadGoogleScript"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadGoogleScript()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="123"
+                                    class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:123</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Carga dinámicamente el script del cliente de Google para inicio de sesión con Google.</p>
+<p>Si el script no está cargado, crea una nueva etiqueta de script y la agrega al head del
+documento. Establece el evento onload del script para resolver la promesa cuando el
+script termine de cargar. Si el script ya está cargado, la promesa se resuelve
+inmediatamente.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>Una promesa que se cumple cuando el script se carga.</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="36"
+                                    class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Carga el carusel y verifica si hay un token de autenticación
+válido en las cookies. Si lo hay, redirige a /info-centros.
+Si no lo hay, muestra el botón de inicio de sesión con Google.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentImageIndex"></a>
+                    <span class="name">
+                        <span ><b>currentImageIndex</b></span>
+                        <a href="#currentImageIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="images"></a>
+                    <span class="name">
+                        <span ><b>images</b></span>
+                        <a href="#images"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+   &#x27;assets/carrouselLogin/1.jpg&#x27;,
+    &#x27;assets/carrouselLogin/2.jpg&#x27;,
+    &#x27;assets/carrouselLogin/3.jpg&#x27;
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/google-sign-in/google-sign-in.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, NgZone, OnInit} from &#x27;@angular/core&#x27;;
+import {jwtDecode} from &quot;jwt-decode&quot;;
+import {AuthService} from &quot;../../services/auth.service&quot;;
+import {Router} from &quot;@angular/router&quot;;
+import Swal2 from &quot;sweetalert2&quot;;
+import {CookieService} from &quot;ngx-cookie-service&quot;;
+import {ToastrService} from &quot;ngx-toastr&quot;;
+import { environment } from &quot;../../../environments/environment.prod&quot;;
+
+declare const google: any;
+
+@Component({
+  selector: &#x27;app-google-sign-in&#x27;,
+  templateUrl: &#x27;./google-sign-in.component.html&#x27;,
+  styleUrls: [&#x27;./google-sign-in.component.css&#x27;]
+})
+export class GoogleSignInComponent implements OnInit {
+  images: string[] &#x3D; [
+   &#x27;assets/carrouselLogin/1.jpg&#x27;,
+    &#x27;assets/carrouselLogin/2.jpg&#x27;,
+    &#x27;assets/carrouselLogin/3.jpg&#x27;
+  ];
+  currentImageIndex &#x3D; 0;
+  constructor(private ngZone: NgZone,
+              private authService: AuthService,
+              private router: Router,
+              private cookieService: CookieService,
+              private toastr: ToastrService) { }
+
+
+  /**
+   * Carga el carusel y verifica si hay un token de autenticación
+   * válido en las cookies. Si lo hay, redirige a /info-centros.
+   * Si no lo hay, muestra el botón de inicio de sesión con Google.
+   */
+  ngOnInit(): void {
+    this.loadCarousel();
+    const token &#x3D; this.authService.getToken();
+    if (token &amp;&amp; !this.authService.isTokenExpired(token)) {
+      this.authService.setAuthState(true);
+      this.router.navigate([&#x27;/no-autorizado&#x27;]);
+      return;
+    }
+    // Mostrar botón de login si no hay token válido
+    this.loadGoogleScript().then(() &#x3D;&gt; {
+      this.initializeGoogleSignIn();
+    });
+  }
+
+
+  /**
+   * Inicializa el botón de inicio de sesión con Google (GSI).
+   *
+   * Este método inicializa el botón de GSI con el identificador de cliente y una
+   * función de callback. La función de callback se llama cuando el usuario hace clic
+   * en el botón de GSI y se autentica con Google.
+   *
+   * El método también renderiza el botón de GSI con un tema y tamaño personalizados.
+   * El tema se establece en &#x27;outline&#x27; y el tamaño se establece en &#x27;large&#x27;.
+   *
+   * Además, el método muestra el diálogo de inicio de sesión de un solo toque, que
+   * permite al usuario iniciar sesión con un solo clic.
+   */
+  initializeGoogleSignIn() {
+    google.accounts.id.initialize({
+      client_id: environment.googleId,
+      callback: (response: any) &#x3D;&gt; this.handleCredentialResponse(response)
+    });
+
+    google.accounts.id.renderButton(
+        document.getElementById(&#x27;google-signin-button&#x27;),
+        { theme: &#x27;outline&#x27;, size: &#x27;large&#x27; }  // customization attributes
+    );
+
+    google.accounts.id.prompt(); // also display the One Tap dialog
+  }
+
+  /**
+   * Maneja la respuesta recibida de Google Sign-In.
+   *
+   * Este método toma la respuesta del proceso de inicio de sesión de Google y verifica
+   * si hay cuentas existentes utilizando el &#x60;authService&#x60;. Si la verificación de la cuenta
+   * tiene éxito, muestra un mensaje de éxito, establece el estado de autenticación,
+   * guarda el token en cookies y navega a la ruta &#x27;/info-centros&#x27;. Si la verificación de la
+   * cuenta falla, muestra un mensaje de error con el motivo del fallo.
+   *
+   * @param response - El objeto de respuesta recibido de Google Sign-In que contiene la credencial.
+   */
+  handleCredentialResponse(response: any) {
+    this.authService.checkExistingAccounts(response.credential).subscribe(res &#x3D;&gt; {
+      if (res.success) {
+        this.toastr.success(&quot;Inicio de sesión exitoso&quot;, &quot;Login de Google&quot;, {
+          positionClass: &quot;toast-bottom-right&quot;
+        });
+        this.cookieService.set(&#x27;token&#x27;, res.token, 1, &#x27;/&#x27;);
+        this.ngZone.run(() &#x3D;&gt; {
+          this.authService.setAuthState(true);
+          this.router.navigate([&#x27;/menu&#x27;]); 
+        });
+      }else{
+        Swal2.fire({
+          icon: &#x27;error&#x27;,
+          title: &#x27;Inicio de sesión fallido&#x27;,
+          html: res.error + &#x27;&lt;br&gt;Entre en contacto con el administrador&#x27;,
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+    });
+  }
+
+  /**
+   * Carga dinámicamente el script del cliente de Google para inicio de sesión con Google.
+   *
+   * Si el script no está cargado, crea una nueva etiqueta de script y la agrega al head del
+   * documento. Establece el evento onload del script para resolver la promesa cuando el
+   * script termine de cargar. Si el script ya está cargado, la promesa se resuelve
+   * inmediatamente.
+   *
+   * @returns {Promise&lt;void&gt;} Una promesa que se cumple cuando el script se carga.
+   */
+
+  private loadGoogleScript(): Promise&lt;void&gt; {
+    return new Promise((resolve) &#x3D;&gt; {
+      const existingScript &#x3D; document.getElementById(&#x27;google-client-script&#x27;);
+      if (!existingScript) {
+        const script &#x3D; document.createElement(&#x27;script&#x27;);
+        script.src &#x3D; &#x27;https://accounts.google.com/gsi/client&#x27;;
+        script.id &#x3D; &#x27;google-client-script&#x27;;
+        script.onload &#x3D; () &#x3D;&gt; {
+          resolve();
+        };
+        document.head.appendChild(script);
+      } else {
+        resolve();
+      }
+    });
+  }
+
+  /**
+   * Realiza un ciclo automático a través de las imágenes en el carrusel.
+   *
+   * Este método actualiza el índice &#x60;currentImageIndex&#x60; a intervalos regulares,
+   * lo que hace que la imagen mostrada en el carrusel cambie cada 5 segundos.
+   */
+  private loadCarousel() {
+    setInterval(() &#x3D;&gt; {
+      this.currentImageIndex &#x3D; (this.currentImageIndex + 1) % this.images.length;
+    }, 5000);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;login-wrapper&quot;&gt;
+    &lt;div class&#x3D;&quot;login-card&quot;&gt;
+        &lt;!-- Encabezado con logo y título --&gt;
+        &lt;div class&#x3D;&quot;login-header&quot;&gt;
+            &lt;h2&gt;Gestión de Formaciones de la Fundación Loyola&lt;/h2&gt;
+            &lt;div class&#x3D;&quot;separator&quot;&gt;&lt;/div&gt;
+            &lt;img
+                    src&#x3D;&quot;assets/carrouselLogin/logotipo-fundacion-loyola.png&quot;
+                    alt&#x3D;&quot;Logo Fundación Loyola&quot;
+                    class&#x3D;&quot;login-logo&quot;
+            /&gt;
+        &lt;/div&gt;
+
+        &lt;p&gt;
+            Acceso a la intranet de la Fundación Loyola, para la gestión de formaciones.&lt;br /&gt;
+            Si buscas información sobre la Fundación Loyola, accede a la
+            &lt;a href&#x3D;&quot;https://www.fundacionloyola.es/institucional&quot; target&#x3D;&quot;_blank&quot;&gt;Web Institucional&lt;/a&gt;
+        &lt;/p&gt;
+
+        &lt;!-- Botón de Google --&gt;
+        &lt;div id&#x3D;&quot;google-signin-button&quot;&gt;&lt;/div&gt;
+        &lt;hr class&#x3D;&quot;login-separator&quot; /&gt;
+        &lt;div class&#x3D;&quot;login-footer&quot;&gt;
+&lt;!--            &lt;div class&#x3D;&quot;social-networks&quot;&gt;--&gt;
+&lt;!--                &lt;a href&#x3D;&quot;https://www.facebook.com/fundacion.loyola&quot; target&#x3D;&quot;_blank&quot;&gt;--&gt;
+&lt;!--                    &lt;i class&#x3D;&quot;flaticon-facebook&quot;&gt;&lt;/i&gt;--&gt;
+&lt;!--                &lt;/a&gt;--&gt;
+&lt;!--                &lt;a href&#x3D;&quot;https://twitter.com/fundacionloyola&quot; target&#x3D;&quot;_blank&quot;&gt;--&gt;
+&lt;!--                    &lt;i class&#x3D;&quot;flaticon-twitter&quot;&gt;&lt;/i&gt;--&gt;
+&lt;!--                &lt;/a&gt;--&gt;
+&lt;!--                &lt;a href&#x3D;&quot;https://www.instagram.com/fundacionloyola/&quot; target&#x3D;&quot;_blank&quot;&gt;--&gt;
+&lt;!--                    &lt;i class&#x3D;&quot;flaticon-instagram&quot;&gt;&lt;/i&gt;--&gt;
+&lt;!--                &lt;/a&gt;--&gt;
+&lt;!--                &lt;a href&#x3D;&quot;https://www.youtube.com/c/Fundaci nLoyola&quot; target&#x3D;&quot;_blank&quot;&gt;--&gt;
+&lt;!--                    &lt;i class&#x3D;&quot;flaticon-youtube&quot;&gt;&lt;/i&gt;--&gt;
+&lt;!--                &lt;/a&gt;--&gt;
+&lt;!--            &lt;/div&gt;--&gt;
+            &lt;p class&#x3D;&quot;text-center mt-4&quot;&gt;
+                &amp;copy; 2025 Fundación Loyola. Todos los derechos reservados.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Carrusel de fondo --&gt;
+&lt;div class&#x3D;&quot;carousel-background&quot;&gt;
+    &lt;img *ngFor&#x3D;&quot;let image of images; let i &#x3D; index&quot; [src]&#x3D;&quot;image&quot; [class.active]&#x3D;&quot;i &#x3D;&#x3D;&#x3D; currentImageIndex&quot; alt&#x3D;&quot;Carrusel de fondo&quot;/&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./google-sign-in.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:root {
+    --color-primario: #1274ca;
+    --color-secundario: #014179;
+    --color-terciario: #006da4;
+    --color-cuaternario: #408cce;
+    --color-quintario: #dd890d;
+    --color-exito: #28a745;
+    --color-error: #dc3545;
+    --color-aviso: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --font-family: &#x27;Open Sans&#x27;, sans-serif;
+}
+
+* {
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.login-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    background: var(--light-color);
+    padding: 3em;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 550px;
+    width: 90vw;
+    font-size: 1.1rem;
+}
+
+.login-social-bar {
+    margin-top: 2em;
+}
+
+.login-social-bar a {
+    margin: 0 15px;
+    font-size: 1.6em;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.carousel-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    filter: blur(8px);
+    transform: scale(1.05);
+}
+
+.carousel-background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-background img.active {
+    opacity: 1;
+}
+
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    flex: 1;
+    text-align: left;
+}
+
+.separator {
+    width: 1px;
+    height: 100px;
+    background-color: #ccc;
+    margin: 0 1rem;
+}
+
+.login-logo {
+    height: 120px;
+    object-fit: contain;
+}
+
+.social-networks a {
+    margin: 0 15px;
+    font-size: 2rem;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.social-networks i {
+    transition: transform 0.3s ease;
+}
+
+.social-networks i:hover {
+    transform: scale(1.1);
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="login-wrapper">    <div class="login-card">        <!-- Encabezado con logo y título -->        <div class="login-header">            <h2>Gestión de Formaciones de la Fundación Loyola</h2>            <div class="separator"></div>            <img                    src="assets/carrouselLogin/logotipo-fundacion-loyola.png"                    alt="Logo Fundación Loyola"                    class="login-logo"            />        </div>        <p>            Acceso a la intranet de la Fundación Loyola, para la gestión de formaciones.<br />            Si buscas información sobre la Fundación Loyola, accede a la            <a href="https://www.fundacionloyola.es/institucional" target="_blank">Web Institucional</a>        </p>        <!-- Botón de Google -->        <div id="google-signin-button"></div>        <hr class="login-separator" />        <div class="login-footer"><!--            <div class="social-networks">--><!--                <a href="https://www.facebook.com/fundacion.loyola" target="_blank">--><!--                    <i class="flaticon-facebook"></i>--><!--                </a>--><!--                <a href="https://twitter.com/fundacionloyola" target="_blank">--><!--                    <i class="flaticon-twitter"></i>--><!--                </a>--><!--                <a href="https://www.instagram.com/fundacionloyola/" target="_blank">--><!--                    <i class="flaticon-instagram"></i>--><!--                </a>--><!--                <a href="https://www.youtube.com/c/Fundaci nLoyola" target="_blank">--><!--                    <i class="flaticon-youtube"></i>--><!--                </a>--><!--            </div>-->            <p class="text-center mt-4">                &copy; 2025 Fundación Loyola. Todos los derechos reservados.            </p>        </div>    </div></div><!-- Carrusel de fondo --><div class="carousel-background">    <img *ngFor="let image of images; let i = index" [src]="image" [class.active]="i === currentImageIndex" alt="Carrusel de fondo"/></div></div>'
+    var COMPONENTS = [{'name': 'AltaCentroComponent', 'selector': 'app-alta-centro'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AsignarUsuariosFormacionModalComponent', 'selector': 'app-asignar-usuarios'},{'name': 'CrearFormacionModalComponent', 'selector': 'app-crear-formacion-modal'},{'name': 'EditarFormacionModalComponent', 'selector': 'app-editar-formacion-modal'},{'name': 'EditUserComponent', 'selector': 'app-edit-user'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormacionFormComponent', 'selector': 'app-formacion-form'},{'name': 'GoogleSignInComponent', 'selector': 'app-google-sign-in'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'InfoCentroComponent', 'selector': 'app-info-centro'},{'name': 'InfoCursoComponent', 'selector': 'app-info-curso'},{'name': 'InfoEducadorComponent', 'selector': 'app-info-educador'},{'name': 'InfoFormacionComponent', 'selector': 'app-info-sdsda'},{'name': 'InscripcionFormacionComponent', 'selector': 'app-asignar-usuario-formacion'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'ModificarCentroComponent', 'selector': 'app-modificar-centro'},{'name': 'NoAutorizadoComponent', 'selector': 'app-no-autorizado'},{'name': 'TemplateComponent', 'selector': 'app-template'},{'name': 'UserFileComponent', 'selector': 'app-user-file'},{'name': 'UserModalComponent', 'selector': 'app-new-user'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'GoogleSignInComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GoogleSignInComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
